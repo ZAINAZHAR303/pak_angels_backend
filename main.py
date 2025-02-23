@@ -13,8 +13,10 @@ from threat import WildlifeDetectionSystem
 import os
 
 # Disable OpenCV GUI functions
-os.environ["OPENCV_IO_ENABLE_OPENEXR"] = "0"
+os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"
 os.environ["OPENCV_VIDEOIO_MSMF_ENABLE_HW_TRANSFORMS"] = "0"
+os.environ["OPENCV_FFMPEG_CAPTURE_OPTIONS"] = "rtsp_transport;udp"
+os.environ["QT_QPA_PLATFORM"] = "offscreen"  # Prevents GUI errors
 import cv2
 # Initialize FastAPI app
 app = FastAPI()
