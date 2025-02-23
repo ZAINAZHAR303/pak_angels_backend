@@ -1,14 +1,12 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
-import numpy as np
-import cv2
-import torch
+# import numpy as np
+# import cv2
+# import torch
 from PIL import Image
 from ultralytics import YOLO
 from transformers import AutoImageProcessor, AutoModelForImageClassification, pipeline
-from land_change import detect_land_changes
-from species_mont import SpeciesMonitoringSystem
-from threat import WildlifeDetectionSystem
+
 
 # Initialize FastAPI app
 app = FastAPI()
